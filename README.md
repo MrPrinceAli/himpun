@@ -13,6 +13,7 @@ Transparent fundraising on Ethereum. Donations are held by a smart contract, and
 
 ## Table of contents
 
+- [Screenshots](#screenshots)
 - [Project structure](#project-structure)
 - [Features](#features)
 - [Platform rules](#platform-rules)
@@ -25,6 +26,39 @@ Transparent fundraising on Ethereum. Donations are held by a smart contract, and
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 - Separate documents (written in Indonesian): [platform rules in detail](docs/ATURAN.md) · [architecture](docs/ARSITEKTUR.md)
+
+## Screenshots
+
+![Landing page](docs/screenshots/landing.png)
+
+| Explore campaigns                                                                                                        | Campaign page                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| ![Explore campaigns](docs/screenshots/explore.png)                                                                       | ![Campaign page](docs/screenshots/campaign.png)                                                            |
+| Filter by status, category and province, search, sort, and favorites. Every number is read straight from the blockchain. | Progress, donate panel with a message of support, donors, fundraiser updates, and a full activity history. |
+
+**Withdrawal voting**, the core rule of the platform: donors approve or reject every withdrawal request before any funds leave the contract.
+
+![Withdrawal voting](docs/screenshots/withdraw.png)
+
+| Platform stats                                                                                    | Admin panel                                                                |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![Platform stats](docs/screenshots/stats.png)                                                     | ![Admin panel](docs/screenshots/admin.png)                                 |
+| Funds raised, unique donors, donations per day, funds per category, top campaigns and top donors. | Reported campaigns, verification queue, appeals, and taken-down campaigns. |
+
+| Fundraiser profile                                                           | Dark mode                                                         |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ![Fundraiser profile](docs/screenshots/creator.png)                          | ![Dark mode](docs/screenshots/dark.png)                           |
+| Total raised, unique donors, and a daily donation chart for each fundraiser. | Indonesian / English and light / dark, remembered in the browser. |
+
+**On mobile**
+
+<p>
+  <img src="docs/screenshots/hp-landing.png" alt="Landing page on mobile" width="270">
+  <img src="docs/screenshots/hp-campaign.png" alt="Campaign page on mobile" width="270">
+  <img src="docs/screenshots/hp-withdraw.png" alt="Withdrawal voting on mobile" width="270">
+</p>
+
+_Taken on a local Hardhat node with the demo data from `npm run seed:local`._
 
 ## Project structure
 
