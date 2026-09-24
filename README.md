@@ -1,5 +1,12 @@
 # Himpun
 
+[![CI](https://github.com/MrPrinceAli/himpun/actions/workflows/ci.yml/badge.svg)](https://github.com/MrPrinceAli/himpun/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/MrPrinceAli/himpun)](LICENSE)
+[![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity&logoColor=white)](smart-contract/)
+[![Hardhat](https://img.shields.io/badge/Hardhat-2-FFF100)](smart-contract/)
+[![Next.js](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](frontend/)
+[![ethers.js](https://img.shields.io/badge/ethers.js-v6-2535A0?logo=ethereum&logoColor=white)](frontend/)
+
 Transparent fundraising on Ethereum. Donations are held by a smart contract, and every withdrawal by the fundraiser must be approved by the donors through an on-chain vote.
 
 > _Himpun_ is Indonesian for "to gather" — money gathered together, and decisions made together.
