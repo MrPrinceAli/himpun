@@ -16,6 +16,7 @@ Transparent fundraising on Ethereum. Donations are held by a smart contract, and
 - [Commands](#commands)
 - [Continuous integration](#continuous-integration)
 - [Troubleshooting](#troubleshooting)
+- [License](#license)
 - Separate documents (written in Indonesian): [platform rules in detail](docs/ATURAN.md) · [architecture](docs/ARSITEKTUR.md)
 
 ## Project structure
@@ -202,3 +203,7 @@ After changing a contract, run `compile` and deploy again.
 | 0 ETH balance in MetaMask             | Check that the _Hardhat Localhost_ network is selected and a Hardhat account was imported        |
 | Transaction fails / nonce error       | _Settings → Advanced → Clear activity tab data_                                                  |
 | `Error HH700: Artifact ... not found` | Hardhat cache is out of sync. Run `npx hardhat clean` then `npm run compile` in `smart-contract` |
+
+## License
+
+[MIT](LICENSE)
