@@ -1,18 +1,56 @@
+<div align="center">
+
+<img src="docs/logo.svg" alt="Himpun logo" width="120" />
+
 # Himpun
 
+### Transparent fundraising on Ethereum: donors vote on every withdrawal.
+
+_Himpun_ is Indonesian for "to gather" — money gathered together, and decisions made together.
+
 [![CI](https://github.com/MrPrinceAli/himpun/actions/workflows/ci.yml/badge.svg)](https://github.com/MrPrinceAli/himpun/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/MrPrinceAli/himpun)](LICENSE)
+[![License: MIT](https://img.shields.io/github/license/MrPrinceAli/himpun?color=10b981)](LICENSE)
+[![Slither](https://img.shields.io/badge/security-Slither-10b981?logo=ethereum&logoColor=white)](smart-contract/slither.config.json)
+[![Prettier](https://img.shields.io/badge/code_style-Prettier-F7B93E?logo=prettier&logoColor=black)](.prettierrc.json)
+[![Last commit](https://img.shields.io/github/last-commit/MrPrinceAli/himpun)](https://github.com/MrPrinceAli/himpun/commits/main)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-10b981)](CONTRIBUTING.md)
+
 [![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636?logo=solidity&logoColor=white)](smart-contract/)
-[![Hardhat](https://img.shields.io/badge/Hardhat-2-FFF100)](smart-contract/)
+[![Hardhat](https://img.shields.io/badge/Hardhat-2-FFF100?logo=hardhat&logoColor=black)](smart-contract/)
 [![Next.js](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)](frontend/)
 [![ethers.js](https://img.shields.io/badge/ethers.js-v6-2535A0?logo=ethereum&logoColor=white)](frontend/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)](frontend/tailwind.config.js)
+[![MetaMask](https://img.shields.io/badge/wallet-MetaMask-F6851B?logo=metamask&logoColor=white)](#metamask-setup)
 
-Transparent fundraising on Ethereum. Donations are held by a smart contract, and every withdrawal by the fundraiser must be approved by the donors through an on-chain vote.
+[**Demo**](https://himpun.vercel.app) · [**Screenshots**](#screenshots) · [**How it works**](#how-it-works) · [**Features**](#features) · [**Run locally**](#running-locally)
 
-> _Himpun_ is Indonesian for "to gather" — money gathered together, and decisions made together.
+</div>
+
+---
+
+Donations are held by a smart contract, and every withdrawal by the fundraiser must be approved by the donors through
+an on-chain vote. No platform operator can move the money, and every number on the page is read straight from the
+blockchain.
+
+|            🔒 Funds held by contract            |   🗳️ Donors vote on withdrawals    |              ↩️ Refunds built in              |             👀 Fully transparent             |
+| :---------------------------------------------: | :--------------------------------: | :-------------------------------------------: | :------------------------------------------: |
+| No one can move donations without a passed vote | 3-day vote, majority or 20% quorum | Cancelled, taken down, or abandoned campaigns | Every donation, vote and withdrawal on-chain |
+
+## How it works
+
+```mermaid
+flowchart LR
+  A[Fundraiser creates campaign] --> B[Donors donate ETH<br/>held by Project.sol]
+  B --> C[Fundraiser requests withdrawal<br/>with a reason]
+  C --> D{Donor vote<br/>3 days}
+  D -- "> 50% approve, or quorum 20%<br/>and more approvals" --> E[Funds released<br/>proof on-chain]
+  D -- rejected --> B
+  B -. "cancelled / taken down /<br/>inactive 30 days" .-> F[Donors reclaim<br/>remaining balance]
+```
 
 ## Table of contents
 
+- [How it works](#how-it-works)
 - [Screenshots](#screenshots)
 - [Project structure](#project-structure)
 - [Features](#features)
