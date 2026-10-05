@@ -15,7 +15,7 @@
   "author": "spandan joshi",
   "license": "MIT",
   "devDependencies": {
-    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-chai-matchers": "^3.0.0",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "chai": "^4.5.0",
     "ethers": "^5.8.0",
