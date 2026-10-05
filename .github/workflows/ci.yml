@@ -35,7 +35,7 @@ jobs:
           cache-dependency-path: smart-contract/package-lock.json
       - run: npm ci
         working-directory: smart-contract
-      - uses: crytic/slither-action@v0.4.1
+      - uses: crytic/slither-action@v0.4.2
         with:
           target: smart-contract
           slither-config: smart-contract/slither.config.json
